@@ -1,5 +1,5 @@
 {
-  "name": "bloh",
+  "name": "blog",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@nuxt/content": "^1.14.0",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7"
   },
