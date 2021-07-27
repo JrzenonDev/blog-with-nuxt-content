@@ -1,11 +1,11 @@
 <template>
-  <main>
-    <article>
-      <nuxt-content :document="article" />
-      <p>Post last update: {{ formatDate(article.updatedAt) }}</p>
-    </article>
-    <pre>{{ article }}</pre>
-  </main>
+  <article>
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.description }}</p>
+    <img :src="article.img" :alt="article.alt">
+    <p>Post last update: {{ formatDate(article.updatedAt) }}</p>
+    <nuxt-content :document="article" />
+  </article>
 </template>
 
 <script>
@@ -24,3 +24,28 @@ export default {
   }
 }
 </script>
+
+<style>
+  .nuxt-content h1 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .nuxt-content h2 {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  .nuxt-content h3 {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .nuxt-content p {
+    margin-bottom: 20px;
+  }
+  .icon.icon-link {
+    background-image: url('~assets/svg/icon-hashtag.svg');
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+  }
+</style>
